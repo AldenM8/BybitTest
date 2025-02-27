@@ -118,7 +118,7 @@ class KlineMonitor
                 $"Volume: {kline.Volume}"
             ));
 
-            logLines.Add(""); // 空行分隔
+            logLines.Add("");
 
             // **一次性寫入日誌，避免多次 I/O 操作**
             await File.AppendAllLinesAsync(LogFileName, logLines);
